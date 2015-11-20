@@ -12,7 +12,7 @@ Shell command and its script are quite useful when we use Linux system. This doc
   * ```C-a :resize 10``` resize current window horizontally defaut  
 3. Vim is quite useful as the text editor, especially when you are on the remote cluster.   
   * Use vim to open the directory, then use ```Enter``` to open one file in current directry, and use ```Ctrl+^``` to go back   
-  * Use ```:split``` and ```:vsplit``` to open more files.
+  * Use ```:split``` and ```:vsplit``` to open file in new window, then use ```C-w C-w``` Jump between windows.
   * Use ```!shell-command``` to run temp shell command.
   * Use ```:vertival resize +/- _num_```  to control the window size.
 4. Use _grep_ -r /pattern/ * to search all the lines in all the file in current directory containning the patter.  
