@@ -8,6 +8,8 @@ Shell command and its script are quite useful when we use Linux system. This doc
 2. Use _screen_ to split the window, then differen windows can handle different jobs.  
   * ```C-a S-s``` create a new window horizontally
   * ```C-a c``` create a new shell
+  * ```C-a t``` or ```C-a C-i``` jump between the windows
+  * ```C-a :resize 10``` resize current window horizontally defaut  
 3. Vim is quite useful as the text editor, especially when you are on the remote cluster. 
   * Use vim to open the directory, then use Enter to open one file in current directry, and use Ctrl+^ to go back to the            directory.   
   * Use split and vsplit to open more files.
