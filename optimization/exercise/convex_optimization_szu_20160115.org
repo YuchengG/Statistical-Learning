@@ -1,0 +1,15 @@
+#+TITLE: Exercise on Convex Optimization
+#+AUTHOR: Songpeng Zu
+#+DATE: Start at 2016-01-15
+#+STARTUP: latexpreview
+
+#+BEGIN_ABSTRACT
+This  material is personal answers for the exercise on convex optimization wirtten by Stephen Boyd and Lieven Vandenberghe.
+I only put the main skeletons here.
+#+END_ABSTRACT
+
+* Convex sets
+2.1 $\sum_{i=1}^{k}\theta_{k}x_{k} = (\sum_{i=1}^{k-1}\theta_{i})\sum_{i=1}^{k-1}\frac{\theta_{i}}{\sum_{i=1}^{k-1}\theta_{i}}x_{i} + \theta_{k}x_{k}$
+In which, $\sum_{i=1}^{k-1}\frac{\theta_{i}}{\sum_{i=1}^{k-1}\theta_{i}}x_{i} \in \mathcal{C}$  acording to the mathmatical induction.
+
+2.2
