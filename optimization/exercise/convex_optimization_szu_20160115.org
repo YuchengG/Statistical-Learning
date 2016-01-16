@@ -1,15 +1,34 @@
 #+TITLE: Exercise on Convex Optimization
-#+AUTHOR: Songpeng Zu
-#+DATE: Start at 2016-01-15
-#+STARTUP: latexpreview
+#+author: songpeng zu
+#+date: start at 2016-01-15
+#+startup: latexpreview
 
-#+BEGIN_ABSTRACT
-This  material is personal answers for the exercise on convex optimization wirtten by Stephen Boyd and Lieven Vandenberghe.
-I only put the main skeletons here.
-#+END_ABSTRACT
+#+begin_abstract
+this  material is personal answers for the exercise on convex optimization wirtten by stephen boyd and lieven vandenberghe.
+i only put the main skeletons here.
+#+end_abstract
 
 * Convex sets
-2.1 $\sum_{i=1}^{k}\theta_{k}x_{k} = (\sum_{i=1}^{k-1}\theta_{i})\sum_{i=1}^{k-1}\frac{\theta_{i}}{\sum_{i=1}^{k-1}\theta_{i}}x_{i} + \theta_{k}x_{k}$
-In which, $\sum_{i=1}^{k-1}\frac{\theta_{i}}{\sum_{i=1}^{k-1}\theta_{i}}x_{i} \in \mathcal{C}$  acording to the mathmatical induction.
+** Definition of convexity
+1.  $\sum_{i=1}^{k}\theta_{k}x_{k} = (\sum_{i=1}^{k-1}\theta_{i})\sum_{i=1}^{k-1}\frac{\theta_{i}}{\sum_{i=1}^{k-1}\theta_{i}}x_{i} + \theta_{k}x_{k}$
+     in which, $\sum_{i=1}^{k-1}\frac{\theta_{i}}{\sum_{i=1}^{k-1}\theta_{i}}x_{i} \in \mathcal{c}$  acording to the mathmatical induction.
 
-2.2
+2.  Both are direct, since \theta x + (1-\theta)y \in a line.
+
+3.  We can construct a sequence by the binary search [fn:1], then for any \theta > 0, \theta x + (1 - \theta) y is either in the sequence or the limitation of the sequence. Note  a closed set in the Euclean Space is tight, which means
+       the limitation of the sequence (all the points in the sequences belong to the closed set) is in the set.
+
+4.  The affine hull is the minumum affine set that contains $\mathcal{C}$, and the same as the intersection of all the affine sets that contain $\mathcal{C}$.
+
+** Examples
+5. |b_{1} - b_{2}|
+
+6.  When $a = c \tilde{a}, c \ne 0, d \leq \tilde{d}$, the first halfspace belongs to the second one.  When $(a,b) = c(\tilde{a}, \tilde{b}), c \ne 0$, they are equal.
+
+7. $||x-a||_{2} \leq ||x-b||_{2}$ equals to  $x^{T}x - 2a^{T}x + a^{T}a \leq x^{T}x - 2b^{T}x + b^{T}b$. Then we can get  ${(b - a)}^{T}x \leq \frac{b^{T}b - a^{T}a}{2}$
+
+
+
+[fn:1] The binary search means that for two given points  x and y, if we want to find a point between them, we can firstly use their middle point. If the middle point is not, then the point must lie in either
+          [x, middle point] or [middle point, y] (we assume that x < y). Then we can follow the same procedure with x or y replaced with the middle point. Then the point will be in found by our procedure, or
+         be the limitation of this procedure, which means we can approximate it as closely as we want.
