@@ -1,6 +1,6 @@
 #+TITLE: Exercise on Convex Optimization
-#+author: songpeng zu
-#+date: start at 2016-01-15
+#+author: Songpeng Zu
+#+date: Start at 2016-01-15
 #+startup: latexpreview
 
 #+begin_abstract
@@ -27,8 +27,26 @@ i only put the main skeletons here.
 
 7. $||x-a||_{2} \leq ||x-b||_{2}$ equals to  $x^{T}x - 2a^{T}x + a^{T}a \leq x^{T}x - 2b^{T}x + b^{T}b$. Then we can get  ${(b - a)}^{T}x \leq \frac{b^{T}b - a^{T}a}{2}$
 
+8. (a) When both are zeros, yes; when one is zero, then it's a line segment, yes; when both are non-zeros,  it forms a parallelogram (specially, $a_{1} \bot a_{2}$, it's a square), so yes.\\
+    (b) Yes.
+         \begin{equation*}
+        S = \{ x | -\mathcal{I} x \preceq 0,
+         \begin{bmatrix}
+         1^{T}\\
+         a^{T}\\
+         {a^2}^{T}
+         \end{bmatrix}  x =
+        \begin{bmatrix}
+        1\\
+        b_{1}\\
+        b_{2}
+        \end{bmatrix} \}
+       \end{equation*}
+    (c)  Yes. $S = \{x | x \preceq 1, -x \preceq 0 \}$. Note, y is on the unit ball. $x^{T}y$ is the line passing through origin with y as its normal. In fact, it involves the space. \\
+    (d) Yes, the same as above.
 
-
+9. (a) From Exercise 7, we know that V is the intersection of all the halfspaces,  then it's polyhedron.\\
+    (b) For each halfspace expression, we can reversely construct the corresponding equations for x_{0}, and x_{i}.
 [fn:1] The binary search means that for two given points  x and y, if we want to find a point between them, we can firstly use their middle point. If the middle point is not, then the point must lie in either
           [x, middle point] or [middle point, y] (we assume that x < y). Then we can follow the same procedure with x or y replaced with the middle point. Then the point will be in found by our procedure, or
          be the limitation of this procedure, which means we can approximate it as closely as we want.
