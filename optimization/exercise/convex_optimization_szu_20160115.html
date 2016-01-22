@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Exercise on Convex Optimization</title>
-<!-- 2016-01-21 Thu 22:42 -->
+<!-- 2016-01-22 Fri 09:49 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Songpeng Zu" />
@@ -259,7 +259,12 @@ the limitation of the sequence (all the points in the sequences belong to the cl
 </p>
 </li>
 
-<li></li>
+<li>(a) From Exercise 7, we know that V is the intersection of all the halfspaces,  then it's polyhedron.<br  />
+    (b) We need to choose a interior point from S (S has nonempty interior ). Then for each halfspace expression, we can reversely construct the corresponding equations x<sub>i</sub> according to Exercise 7.<br  />
+    (c) Since no specific rules for choosing x<sub>0</sub>. We can then say V<sub>k</sub> is polyhedon, for k &isin; 0, &#x2026;, K.  For each pair of V<sub>i</sub> and V<sub>k</sub> (i is not equal to k), their intersection is the boundary between them.
+ For any point in \(\mathcal{R}\) it must be near to one point from x<sub>0</sub>,&#x2026;, x<sub>K</sub>. Then the union of V<sub>k</sub> is the whole space.
+\(\color{red}{The~latter~question.}\)
+</li>
 </ol>
 </div>
 </div>
@@ -280,7 +285,7 @@ be the limitation of this procedure, which means we can approximate it as closel
 <div id="postamble" class="status">
 <p class="date">Date: Start at 2016-01-15</p>
 <p class="author">Author: Songpeng Zu</p>
-<p class="date">Created: 2016-01-21 Thu 22:42</p>
+<p class="date">Created: 2016-01-22 Fri 09:49</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"></p>
 </div>

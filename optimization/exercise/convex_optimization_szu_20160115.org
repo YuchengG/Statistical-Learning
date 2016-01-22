@@ -2,6 +2,9 @@
 #+author: Songpeng Zu
 #+date: Start at 2016-01-15
 #+startup: latexpreview
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper]
+#+LATEX_HEADER: \usepackage{color}
 
 #+begin_abstract
 this  material is personal answers for the exercise on convex optimization wirtten by stephen boyd and lieven vandenberghe.
@@ -46,7 +49,12 @@ i only put the main skeletons here.
     (d) Yes, the same as above.
 
 9. (a) From Exercise 7, we know that V is the intersection of all the halfspaces,  then it's polyhedron.\\
-    (b) For each halfspace expression, we can reversely construct the corresponding equations for x_{0}, and x_{i}.
+    (b) We need to choose a interior point from S (S has nonempty interior ). Then for each halfspace expression, we can reversely construct the corresponding equations x_{i} according to Exercise 7.\\
+    (c) Since no specific rules for choosing x_{0}. We can then say V_{k} is polyhedon, for k \in 0, ..., K.  For each pair of V_{i} and V_{k} (i is not equal to k), their intersection is the boundary between them.
+         For any point in $\mathcal{R}$ it must be near to one point from x_{0},..., x_{K}. Then the union of V_{k} is the whole space.
+        $\color{red}{The~latter~question.}$
+
+
 [fn:1] The binary search means that for two given points  x and y, if we want to find a point between them, we can firstly use their middle point. If the middle point is not, then the point must lie in either
           [x, middle point] or [middle point, y] (we assume that x < y). Then we can follow the same procedure with x or y replaced with the middle point. Then the point will be in found by our procedure, or
          be the limitation of this procedure, which means we can approximate it as closely as we want.
