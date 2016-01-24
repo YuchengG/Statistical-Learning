@@ -32,7 +32,7 @@ i only put the main skeletons here.
 
 8. (a) When both are zeros, yes; when one is zero, then it's a line segment, yes; when both are non-zeros,  it forms a parallelogram (specially, $a_{1} \bot a_{2}$, it's a square), so yes.\\
     (b) Yes.
-         \begin{equation*}
+         \begin{equation}
         S = \{ x | -\mathcal{I} x \preceq 0,
          \begin{bmatrix}
          1^{T}\\
@@ -44,7 +44,7 @@ i only put the main skeletons here.
         b_{1}\\
         b_{2}
         \end{bmatrix} \}
-       \end{equation*}
+       \end{equation}
     (c)  Yes. $S = \{x | x \preceq 1, -x \preceq 0 \}$. Note, y is on the unit ball. $x^{T}y$ is the line passing through origin with y as its normal. In fact, it involves the space. \\
     (d) Yes, the same as above.
 
@@ -54,7 +54,43 @@ i only put the main skeletons here.
          For any point in $\mathcal{R}$ it must be near to one point from x_{0},..., x_{K}. Then the union of V_{k} is the whole space.
         $\color{red}{The~latter~question.}$
 
+10. (a) If $A \succeq 0$, i.e., A is a symmetric positive semidefinite matrix. For any x_{1}, x_{2}, we have,
+           \begin{equation*}
+           {(x_{1} - x_{2})}^T A (x_{1} - x_{2}) = x_{1}^T A x_{1} + x_{2}^T A x_{2} - 2 x_{1}^T A x_{2}\geq 0
+           \end{equation*}
+          Then, we get
+          \begin{equation}
+          2 x_{1}^T A x_{2} \leq x_{1}^T A x_{1} + x_{2}^T A x_{2}
+          \end{equation}
+          Then for any convex combination [fn:2] of x_{1} and x_{2}, y,  we have:
+          \begin{equation*}
+          \begin{aligned}
+         &  y^Ty + b^Ty + c \\
+          & = \theta^2 x_{1}^TAx_{1} + {(1-\theta)^2} x_{2}^TAx_{2} + 2 \theta (1- \theta)x_{1}^TAx_{2} + b^T(\theta x_{1} + (1-\theta)x_{2}) + (\theta + 1 - \theta)c\\
+          & \leq \theta^2 x_{1}^TAx_{1} + {(1-\theta)^2} x_{2}^TAx_{2} + \theta (1- \theta)(x_{1}^T A x_{1} + x_{2}^T A x_{2}) +  b^T(\theta x_{1} + (1-\theta)x_{2}) + (\theta + 1 - \theta)c\\
+          & \leq \theta (x_{1}^TAx_{1} + b^Tx_{1} + c) + (1 - \theta)(x_{2}^TAx_{2} + b^{T}x_{2} + c)\\
+          & \leq 0
+          \end{aligned}
+          \end{equation*}
+          So C is a convex set when $A \succeq 0$. \\
+      (b) For any convex combination of x_{1} and x_{2}, the linear equation is trivial. For the quadratic inequality, we follow the same logic as (a). The different is, instead of use $x_{1}^TAx_{2}$
+           directly, here we use $x_{1}^T(A+ \lambda gg^{T})x_{2} - \lambda x_{1}^Tgg^{T}x_{2}$. The  matrix $A+ \lambda gg^{T}$  is positive semidefinite, and we can again use its character as (a).
+           Also note:
+          \begin{equation*}
+          x^Tgg^Tx = trace(g^Tx x^Tg) = trace(g^Tx (g^Tx)) = g^Tx (g^Tx)
+          \end{equation*}
+          Given the linear equation, we then have
+          \begin{equation*}
+          x_{1}^Tgg^Tx_{2} = g^Tx_{1} (g^T x_{2}) = h^2
+          \end{equation*}
+          Then we can directly prove the quadratic inequality. $\color{red}{The~latter~question.}$
+
+11.   Change the original inequality as $\log x_{1} + \log x_{2} \geq 0$, then use the general arithmetic-geometric mean inequality. For $n\geq 3$, we can also generalize the inequality based on the provement of
+        the two-dimensional situation, which uses the $-\log$ function's convexisity.
+
+12.
 
 [fn:1] The binary search means that for two given points  x and y, if we want to find a point between them, we can firstly use their middle point. If the middle point is not, then the point must lie in either
           [x, middle point] or [middle point, y] (we assume that x < y). Then we can follow the same procedure with x or y replaced with the middle point. Then the point will be in found by our procedure, or
          be the limitation of this procedure, which means we can approximate it as closely as we want.
+[fn:2] Here we define a convex combination is a mapping from the production of two same regular space to the same space with parameter $\theta \in [0,1]$ :  $f(x_{1},x_{2}) = \theta x_{1} + (1-\theta)x_{2}$
