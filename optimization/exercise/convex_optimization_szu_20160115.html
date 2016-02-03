@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Exercise on Convex Optimization</title>
-<!-- 2016-02-04 Thu 00:42 -->
+<!-- 2016-02-04 Thu 01:13 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Songpeng Zu" />
@@ -190,6 +190,12 @@ for the JavaScript code in this tag.
 <li><a href="#sec-1-2">1.2. Examples</a></li>
 </ul>
 </li>
+<li><a href="#sec-2">2. Convex functions</a></li>
+<li><a href="#sec-3">3. Convex optimization problems</a></li>
+<li><a href="#sec-4">4. Duality</a></li>
+<li><a href="#sec-5">5. Approximation and fitting</a></li>
+<li><a href="#sec-6">6. Statistical estimation</a></li>
+<li><a href="#sec-7">7. Genomic problems</a></li>
 </ul>
 </div>
 </div>
@@ -331,11 +337,43 @@ Then if x is the convex combination of x<sub>1</sub> and x<sub>2</sub>, we have
 \end{equation}
 <p>
 Replace x<sub>0</sub> with y, we can have similar formula. Compare the two formulas, only last two terms are different. Considering the previous inequalities,
-we can see x still satisfies the condition.
+we can see x still satisfies the condition.<br  />
+    (e) yes. The procedure is similar with the one above. <br  />
+    Note we only need to prove x, the convex combination of x<sub>1</sub> and x<sub>2</sub>, satisfies:
+</p>
+\begin{equation}
+\inf_{x_0}(x_0^Tx_0 - 2x^Tx_0) \leq y^Ty - 2x^Ty
+\end{equation}
+<p>
+for any y in the T. And \(x_0^Tx_0 = \theta x_0^Tx_0 + (1-\theta) x_0^Tx_0\), x<sub>1</sub> and x<sub>2</sub> satisfies the inequality above.<br  />
+    (f) yes. For any y in S<sub>2</sub>, x is the convex combination of x<sub>1</sub> and x<sub>2</sub>, and x<sub>1</sub> and x<sub>2</sub> are in the defined set, we have<br  />
+    \(x + y = \theta(x_1 + y) + (1-\theta)(x_2 + y), x_1 +y \in S_1, x_2 + y \in S_1\) Note S<sub>1</sub> is convex, so \(x+y \in S_1\).<br  />
+    (g) yes. Follow the same procedure as (d).
 </p>
 </li>
 </ol>
 </div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Convex functions</h2>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Convex optimization problems</h2>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Duality</h2>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Approximation and fitting</h2>
+</div>
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Statistical estimation</h2>
+</div>
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Genomic problems</h2>
+<div class="outline-text-2" id="text-7">
 </div>
 </div>
 <div id="footnotes">
@@ -358,7 +396,7 @@ Here we define a convex combination is a mapping from the production of two same
 <div id="postamble" class="status">
 <p class="date">Date: Start at 2016-01-15</p>
 <p class="author">Author: Songpeng Zu</p>
-<p class="date">Created: 2016-02-04 Thu 00:42</p>
+<p class="date">Created: 2016-02-04 Thu 01:13</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"></p>
 </div>

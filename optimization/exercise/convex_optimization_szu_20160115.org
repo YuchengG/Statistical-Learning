@@ -104,7 +104,24 @@ i only put the main skeletons here.
     \end{aligned}
     \end{equation}
     Replace x_0 with y, we can have similar formula. Compare the two formulas, only last two terms are different. Considering the previous inequalities,
-    we can see x still satisfies the condition.
+    we can see x still satisfies the condition.\\
+    (e) yes. The procedure is similar with the one above. \\
+    Note we only need to prove x, the convex combination of x_1 and x_2, satisfies:
+    \begin{equation}
+    \inf_{x_0}(x_0^Tx_0 - 2x^Tx_0) \leq y^Ty - 2x^Ty
+    \end{equation}
+    for any y in the T. And $x_0^Tx_0 = \theta x_0^Tx_0 + (1-\theta) x_0^Tx_0$, x_1 and x_2 satisfies the inequality above.\\
+    (f) yes. For any y in S_2, x is the convex combination of x_1 and x_2, and x_1 and x_2 are in the defined set, we have\\
+    $x + y = \theta(x_1 + y) + (1-\theta)(x_2 + y), x_1 +y \in S_1, x_2 + y \in S_1$ Note S_1 is convex, so $x+y \in S_1$.\\
+    (g) yes. Follow the same procedure as (d).
+
+* Convex functions
+* Convex optimization problems
+* Duality
+* Approximation and fitting
+* Statistical estimation
+* Genomic problems
+
 [fn:1] The binary search means that for two given points  x and y, if we want to find a point between them, we can firstly use their middle point. If the middle point is not, then the point must lie in either
           [x, middle point] or [middle point, y] (we assume that x < y). Then we can follow the same procedure with x or y replaced with the middle point. Then the point will be in found by our procedure, or
          be the limitation of this procedure, which means we can approximate it as closely as we want.
