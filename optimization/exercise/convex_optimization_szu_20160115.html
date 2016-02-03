@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Exercise on Convex Optimization</title>
-<!-- 2016-01-24 Sun 15:11 -->
+<!-- 2016-02-04 Thu 00:42 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Songpeng Zu" />
@@ -308,8 +308,31 @@ Then we can directly prove the quadratic inequality. \(\color{red}{The~latter~qu
 </p>
 </li>
 
-<li>Change the original inequality as \(\log x_{1} + \log x_{2} \geq 0\), then use the general arithmetic-geometric mean inequality. For \(n\geq 3\), we can also genarilise the inequality based on the provement of
+<li>Change the original inequality as \(\log x_{1} + \log x_{2} \geq 0\), then use the general arithmetic-geometric mean inequality. For \(n\geq 3\), we can also generalize the inequality based on the provement of
 the two-dimensional situation, which uses the \(-\log\) function's convexisity.
+</li>
+
+<li>(a) yes.<br  />
+    (b) yes.<br  />
+    (c) yes.<br  />
+    (d) yes. Suppose x<sub>1</sub>, x<sub>2</sub> belongs to the defined set. Then from \({||x - x_0||}_2 \leq ||x - y||_2\), we have that
+\begin{gather}
+-2x_1^T(x_0 - y) \leq y^Ty - x_0^Tx_0 \\
+-2x_2^T(x_0 - y) \leq y^Ty - x_0^Tx_0
+\end{gather}
+<p>
+Then if x is the convex combination of x<sub>1</sub> and x<sub>2</sub>, we have
+</p>
+\begin{equation}
+\begin{aligned}
+{||x - x_0||}_2^2 & = {||\theta x_1 + (1-\theta)x_2 - x_0||}_2^2\\
+& = \theta^2 x_1^Tx_1 + {(1-\theta)}^2 x_2^T x_2 + 2\theta(1-\theta)x_1^Tx_2 + x_0^Tx_0 - 2(\theta x_1^T + (1-\theta)x_2^T)x_0
+\end{aligned}
+\end{equation}
+<p>
+Replace x<sub>0</sub> with y, we can have similar formula. Compare the two formulas, only last two terms are different. Considering the previous inequalities,
+we can see x still satisfies the condition.
+</p>
 </li>
 </ol>
 </div>
@@ -335,7 +358,7 @@ Here we define a convex combination is a mapping from the production of two same
 <div id="postamble" class="status">
 <p class="date">Date: Start at 2016-01-15</p>
 <p class="author">Author: Songpeng Zu</p>
-<p class="date">Created: 2016-01-24 Sun 15:11</p>
+<p class="date">Created: 2016-02-04 Thu 00:42</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"></p>
 </div>

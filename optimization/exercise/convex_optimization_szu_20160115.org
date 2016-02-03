@@ -91,8 +91,20 @@ i only put the main skeletons here.
 12. (a) yes.\\
     (b) yes.\\
     (c) yes.\\
-    (d)
-
+    (d) yes. Suppose x_1, x_2 belongs to the defined set. Then from ${||x - x_0||}_2 \leq ||x - y||_2$, we have that
+    \begin{gather}
+    -2x_1^T(x_0 - y) \leq y^Ty - x_0^Tx_0 \\
+    -2x_2^T(x_0 - y) \leq y^Ty - x_0^Tx_0
+    \end{gather}
+    Then if x is the convex combination of x_1 and x_2, we have
+    \begin{equation}
+    \begin{aligned}
+    {||x - x_0||}_2^2 & = {||\theta x_1 + (1-\theta)x_2 - x_0||}_2^2\\
+    & = \theta^2 x_1^Tx_1 + {(1-\theta)}^2 x_2^T x_2 + 2\theta(1-\theta)x_1^Tx_2 + x_0^Tx_0 - 2(\theta x_1^T + (1-\theta)x_2^T)x_0
+    \end{aligned}
+    \end{equation}
+    Replace x_0 with y, we can have similar formula. Compare the two formulas, only last two terms are different. Considering the previous inequalities,
+    we can see x still satisfies the condition.
 [fn:1] The binary search means that for two given points  x and y, if we want to find a point between them, we can firstly use their middle point. If the middle point is not, then the point must lie in either
           [x, middle point] or [middle point, y] (we assume that x < y). Then we can follow the same procedure with x or y replaced with the middle point. Then the point will be in found by our procedure, or
          be the limitation of this procedure, which means we can approximate it as closely as we want.
