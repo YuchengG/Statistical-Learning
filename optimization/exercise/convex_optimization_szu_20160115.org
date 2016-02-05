@@ -115,6 +115,30 @@ i only put the main skeletons here.
     $x + y = \theta(x_1 + y) + (1-\theta)(x_2 + y), x_1 +y \in S_1, x_2 + y \in S_1$ Note S_1 is convex, so $x+y \in S_1$.\\
     (g) yes. Follow the same procedure as (d).
 
+13. $\{\theta_1 X_1X_1^T + \theta_2 X_2X_2^T | \theta_i \geq 0, X_i \in \mathcal{R}^{n\times k}, rank(X_i)=k, i=1,2\}$
+
+14. (a) Follow the logic at *12(f)*\\
+    (b) Follow the logic above. Note S is convex, then the convex combination of points in S still in S.\\
+
+15. (a) Yes. Expectation is a linear function for a discrete distribution p.\\
+    (b) Yes. $\Pr(x\geq \alpha) = \sum_{i=1}^np_i\mathcal{I}_{a_i \geq \alpha}$, so it is a linear function for p.\\
+    (c) Yes, linear inequality for p.\\
+    (d) Yes, the same as above.\\
+    (e) Yes, the same as above. \\
+    (f) Yes, $Var(X) = EX^2 - (EX)^2$, linear inequality for p.\\
+    (g) Yes, the same as above.\\
+    (h) $\color{red}{Not sure.}$ \\
+    (i) Yes. for any $\beta$ so that $\Pr(x\leq \beta)\geq 0.25$, we have that
+        \begin{equation}
+        \begin{aligned}
+        Pr(x\leq \beta) &  = \sum_{i=1}^n p_i\mathcal{I}_{a_i\leq \beta}\\
+        & = \sum_{i=1}^n \theta p^{(1)}_i\mathcal{I}_{a_i\leq \beta} + \sum_{i=1}^n (1-\theta)p^{(2)}_i\mathcal{I}_{a_i\leq \beta}\\
+        & \geq 0.25
+        \end{aligned}
+        \end{equation}
+        So the $\inf$ of $\beta$ on the convex combination of p^{(1)} and p^{(2)} must less than $\alpha$.
+
+** Operations that preserve convexity
 * Convex functions
 * Convex optimization problems
 * Duality
