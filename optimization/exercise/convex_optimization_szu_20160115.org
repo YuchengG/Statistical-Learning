@@ -139,6 +139,10 @@ i only put the main skeletons here.
         So the $\inf$ of $\beta$ on the convex combination of p^{(1)} and p^{(2)} must less than $\alpha$.
 
 ** Operations that preserve convexity
+1. It is direct.
+2. (a) $\{\frac{\sum_i^K\theta_i\nu_i}{\sum_i^K\theta_it_i}; \theta_i\geq 0, \sum_i^K\theta_i=1\}$ \\
+   (b) When g is not zero, we have $\{\frac{g\nu}{h - f^T\nu}\}$ \\
+   $\color{red}{(c) (d)}$
 * Convex functions
 * Convex optimization problems
 * Duality
