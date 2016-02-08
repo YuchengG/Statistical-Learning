@@ -7,7 +7,7 @@
 #+LATEX_HEADER: \usepackage{color}
 
 #+begin_abstract
-this  material is personal answers for the exercise on convex optimization wirtten by stephen boyd and lieven vandenberghe.
+This  material is personal answers for the exercise on convex optimization wirtten by stephen boyd and lieven vandenberghe.
 i only put the main skeletons here.
 #+end_abstract
 
@@ -143,6 +143,9 @@ i only put the main skeletons here.
 2. (a) $\{\frac{\sum_i^K\theta_i\nu_i}{\sum_i^K\theta_it_i}; \theta_i\geq 0, \sum_i^K\theta_i=1\}$ \\
    (b) When g is not zero, we have $\{\frac{g\nu}{h - f^T\nu}\}$ \\
    $\color{red}{(c) (d)}$
+3. $f^{-1}(x) = \mathcal{P}\circ \mathcal{Q}^{-1}(x,1)$, in which $\mathcal{P}$ is the perspective function, and \\
+   $x \in \{x|c^t(\mathcal{P}\circ \mathcal(Q)^{-1}(x,1))+b >0\}$
+4.
 * Convex functions
 * Convex optimization problems
 * Duality
