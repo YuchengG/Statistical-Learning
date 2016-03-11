@@ -8,7 +8,7 @@
 
 #+begin_abstract
 This  material is personal answers for the exercise on convex optimization wirtten by stephen boyd and lieven vandenberghe.
-i only put the main skeletons here.
+I only put the main skeletons here.
 #+end_abstract
 
 * Convex sets
@@ -139,14 +139,25 @@ i only put the main skeletons here.
         So the $\inf$ of $\beta$ on the convex combination of p^{(1)} and p^{(2)} must less than $\alpha$.
 
 ** Operations that preserve convexity
-1. It is direct.
-2. (a) $\{\frac{\sum_i^K\theta_i\nu_i}{\sum_i^K\theta_it_i}; \theta_i\geq 0, \sum_i^K\theta_i=1\}$ \\
-   (b) When g is not zero, we have $\{\frac{g\nu}{h - f^T\nu}\}$ \\
-   $\color{red}{(c) (d)}$
-3. $f^{-1}(x) = \mathcal{P}\circ \mathcal{Q}^{-1}(x,1)$, in which $\mathcal{P}$ is the perspective function, and \\
-   $x \in \{x|c^t(\mathcal{P}\circ \mathcal(Q)^{-1}(x,1))+b >0\}$
-4.
-* Convex functions
+16. It is direct.
+
+17. (a) $\{\frac{\sum_i^K\theta_i\nu_i}{\sum_i^K\theta_it_i}; \theta_i\geq 0, \sum_i^K\theta_i=1\}$ \\
+    (b) When g is not zero, we have $\{\frac{g\nu}{h - f^T\nu}\}$ \\
+    $\color{red}{(c) (d)}$
+
+18. $f^{-1}(x) = \mathcal{P}\circ \mathcal{Q}^{-1}(x,1)$, in which $\mathcal{P}$ is the perspective function, and \\
+    $x \in \{x|c^t(\mathcal{P}\circ \mathcal(Q)^{-1}(x,1))+b >0\}$
+
+19. (a) $g^{T}\frac{Ax+b}{c^Tx+d} \leq h$, then we can get\\
+        (g^{T}A - hc^T)x \leq -g^{T}b + d\\
+    (b) Following the same rule as (a), we can get\\
+        $(GA-hc^T)x \preceq -Gb +d$ \\
+    (c) Again, we can get \\
+        $x^T(A^TP^{-1}A - cc^T)x + 2(b^TP^{-1}A - dc^{T})x \leq d^2 - b^{T}P^{-1}b$\\
+    (d) We can also get \\
+        $\sum_{i=1}^{n}AxA_{i}\preceq (c^Tx+d)B - b\sum_{i=1}^{n}A_{i}$
+** Seperation theorem and supporting hyperplanes
+* Convex functions≈≈
 * Convex optimization problems
 * Duality
 * Approximation and fitting
