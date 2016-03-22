@@ -24,3 +24,11 @@ Shell command and its script are quite useful when we use Linux system. This doc
     Use ```Ctrl-c Ctrl-k``` to jump to the char mode, which is just the Linux terminal like.
   * Use _shell_ mode to open a shell communication mode in Emacs.
   * Use _dired_ mode to organize the directory.
+  * Use _magit_ mode to work with git.   
+  * Use _AUCTex_ mode to write latex.
+  * Use _org_ mode with GTD (get things done).
+  * Use _ess_ mode to work with R.
+  * Use _flycheck_ mode to check spells, codes' semantic errors.
+  * Use _calendar_ mode to check calendar.
+  * Use _python_ mode to work with python.
+  * Use _C++_ mode to work with C++.
