@@ -25,7 +25,7 @@ Shell command and its script are quite useful when we use Linux system. This doc
   * Use _shell_ mode to open a shell communication mode in Emacs.
   * Use _dired_ mode to organize the directory.
   * Use _magit_ mode to work with git.   
-  * Use _AUCTex_ mode to write latex.
+  * Use _AUCTex_ mode and _CDTex_ mode to write latex.
   * Use _org_ mode with GTD (get things done).
   * Use _ess_ mode to work with R.
   * Use _flycheck_ mode to check spells, codes' semantic errors.
